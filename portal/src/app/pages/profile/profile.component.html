@@ -1,0 +1,30 @@
+<h2>Profile</h2>
+<table>
+  <tbody>
+  <tr>
+    <td>Name</td>
+    <td>:</td>
+    <td>{{ currentUser.name }}</td>
+  </tr>
+  <tr>
+    <td>Username</td>
+    <td>:</td>
+    <td>{{ currentUser.username }}</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>:</td>
+    <td>{{ currentUser.email }}</td>
+  </tr>
+  <tr>
+    <td>Role</td>
+    <td>:</td>
+    <td>{{ currentUser.role | capitalize }}</td>
+  </tr>
+  <tr>
+    <td>Language</td>
+    <td>:</td>
+    <td>{{ currentLanguage.toUpperCase() }}</td>
+  </tr>
+  </tbody>
+</table>

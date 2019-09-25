@@ -1,0 +1,111 @@
+$acme-blue: #00628f;
+$acme-orange: #f39200;
+$acme-grey: #2d3a3e;
+$acme-red: #981920;
+$acme-green: #8dbe22;
+$acme-lightgrey: #d3d3d3;
+$acme-text: rgba(0, 0, 0, 0.7);
+
+$acme-blue-palette: (
+  50 : #e0ecf2,
+  100 : #b3d0dd,
+  200 : #80b1c7,
+  300 : #4d91b1,
+  400 : #267aa0,
+  500 : #00628f,
+  600 : #005a87,
+  700 : #00507c,
+  800 : #004672,
+  900 : #003460,
+  A100 : #90c4ff,
+  A200 : #5da8ff,
+  A400 : #2a8dff,
+  A700 : #117fff,
+  contrast: (
+    50 : $acme-grey,
+    100 : $acme-grey,
+    200 : $acme-grey,
+    300 : $acme-grey,
+    400 : #fff,
+    500 : #fff,
+    600 : #fff,
+    700 : #fff,
+    800 : #fff,
+    900 : #fff,
+    A100 : $acme-grey,
+    A200 : $acme-grey,
+    A400 : #fff,
+    A700 : #fff,
+  )
+);
+
+$acme-orange-palette: (
+  50 : #fef2e0,
+  100 : #fbdeb3,
+  200 : #f9c980,
+  300 : #f7b34d,
+  400 : #f5a226,
+  500 : #f39200,
+  600 : #f18a00,
+  700 : #ef7f00,
+  800 : #ed7500,
+  900 : #ea6300,
+  A100 : #fff,
+  A200 : #ffeade,
+  A400 : #ffc9ab,
+  A700 : #ffb991,
+  contrast: (
+    50 : $acme-grey,
+    100 : $acme-grey,
+    200 : $acme-grey,
+    300 : $acme-grey,
+    400 : $acme-grey,
+    500 : $acme-grey,
+    600 : $acme-grey,
+    700 : $acme-grey,
+    800 : $acme-grey,
+    900 : $acme-grey,
+    A100 : $acme-grey,
+    A200 : $acme-grey,
+    A400 : $acme-grey,
+    A700 : $acme-grey,
+  )
+);
+
+
+$acme-red-palette: (
+  50 : #f3e3e4,
+  100 : #e0babc,
+  200 : #cc8c90,
+  300 : #b75e63,
+  400 : #a73c41,
+  500 : #981920,
+  600 : #90161c,
+  700 : #851218,
+  800 : #7b0e13,
+  900 : #6a080b,
+  A100 : #ff9b9d,
+  A200 : #ff686b,
+  A400 : #ff3539,
+  A700 : #ff1b20,
+  contrast: (
+    50 : $acme-grey,
+    100 : $acme-grey,
+    200 : $acme-grey,
+    300 : #fff,
+    400 : #fff,
+    500 : #fff,
+    600 : #fff,
+    700 : #fff,
+    800 : #fff,
+    900 : #fff,
+    A100 : $acme-grey,
+    A200 : $acme-grey,
+    A400 : #fff,
+    A700 : #fff,
+  )
+);
+
+.app-footer {
+  //background-color: $acme-blue;
+}

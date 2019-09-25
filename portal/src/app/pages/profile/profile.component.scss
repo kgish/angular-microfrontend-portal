@@ -1,0 +1,12 @@
+td {
+  padding: 10px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+tr:first-child td {
+  padding-top: 0;
+}
+

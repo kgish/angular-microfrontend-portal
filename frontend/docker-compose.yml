@@ -1,0 +1,94 @@
+# Run docker-compose build
+# Run docker-compose up -d
+
+version: '3.1'
+
+services:
+
+  api-dashboard:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4201:80"
+    environment:
+      - FRONTEND_TITLE=API Dashboard
+      - FRONTEND_DESCRIPTION=This is a really interesting application where you can do alot of cool stuff
+
+  address-service:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4202:80"
+    environment:
+      - FRONTEND_TITLE=Address Service
+      - FRONTEND_DESCRIPTION=This is another really interesting application where you can do even more cool stuff
+
+  file-transfer:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4203:80"
+    environment:
+      - FRONTEND_TITLE=File Transfer
+      - FRONTEND_DESCRIPTION=Upload and download important files and share with your family and friends
+
+  consumer-admin:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4204:80"
+    environment:
+      - FRONTEND_TITLE=Consumer Admin
+      - FRONTEND_DESCRIPTION=Identity management which allows you to create new consumers, edit and delete them
+
+  subscriber-info:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4205:80"
+    environment:
+      - FRONTEND_TITLE=Subscriber Info
+      - FRONTEND_DESCRIPTION=Access the central platform where you can easily enter all necessary information for your customer
+
+  enum-data:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4206:80"
+    environment:
+      - FRONTEND_TITLE=Enum Data
+      - FRONTEND_DESCRIPTION=Technology linking telephony with the Internet allowing providers to share IP access information of with other providers
+
+  contract-admin:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4207:80"
+    environment:
+      - FRONTEND_TITLE=Contract Admnin
+      - FRONTEND_DESCRIPTION=Customer resource management tool linking contracts and other information for reporting and billing purposes
+
+  mailman-service:
+    image: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4208:80"
+    environment:
+      - FRONTEND_TITLE=Mailman Service
+      - FRONTEND_DESCRIPTION=Advanced dashboard interface to the mail subscriptions and listings for customers

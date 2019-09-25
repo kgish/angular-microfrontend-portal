@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "api-dashboard": "http://localhost:4201/frontend/main.js",
+    "address-service": "http://localhost:4202/frontend/main.js",
+    "file-transfer": "http://localhost:4203/frontend/main.js",
+    "consumer-admin": "http://localhost:4204/frontend/main.js",
+    "subscriber-info": "http://localhost:4205/frontend/main.js",
+    "enum-data": "http://localhost:4206/frontend/main.js",
+    "contract-admin": "http://localhost:4207/frontend/main.js",
+    "mailman-service": "http://localhost:4208/frontend/main.js",
+    "single-spa": "https://unpkg.com/single-spa@4.3.2/lib/system/single-spa.min.js"
+  }
+}

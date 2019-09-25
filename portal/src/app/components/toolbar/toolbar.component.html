@@ -1,0 +1,53 @@
+<mat-toolbar color="primary" class="main-toolbar">
+  <div fxFlex fxLayoutGap="15px" fxLayout fxLayoutAlign="start center">
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li>
+        <h1><a routerLink="/" class="title">{{title}}</a></h1>
+      </li>
+    </ul>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="center center">
+    <ul *ngIf="currentUser" fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li>[ {{currentUser.role | capitalize}} ]</li>
+    </ul>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end center" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="contact">Contact</a></li>
+      <li *ngIf="!currentUser"><a routerLink="login">Login</a></li>
+      <li *ngIf="currentUser" [matMenuTriggerFor]="menuAccount" class="menu-account">
+        <div fxFlex fxLayout fxLayoutAlign="end center">
+          <mat-icon>account_circle</mat-icon>
+          <span fxHide.lt-md class="user-name">{{currentUser.name}}</span>
+        </div>
+        <mat-menu #menuAccount="matMenu">
+          <mat-nav-list>
+            <a mat-list-item routerLink="profile">
+              <mat-icon color="primary" class="menu">person</mat-icon>
+              <span>Profile</span>
+            </a>
+            <a *ngIf="currentUser.role === 'admin'" mat-list-item routerLink="/single-spa">
+              <mat-icon color="primary" class="menu">pages</mat-icon>
+              <span>Single-spa</span>
+            </a>
+            <a *ngIf="currentLanguage === 'en'" mat-list-item (click)="changeLanguage('nl')">
+              <mat-icon color="primary" class="menu">language</mat-icon>
+              <span>NL</span>
+            </a>
+            <a *ngIf="currentLanguage === 'nl'" mat-list-item (click)="changeLanguage('en')">
+              <mat-icon color="primary" class="menu">language</mat-icon>
+              <span>EN</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item (click)="logout()">
+              <mat-icon color="primary" class="menu rotated">exit_to_app</mat-icon>
+              <span>Logout</span>
+            </a>
+          </mat-nav-list>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
+
